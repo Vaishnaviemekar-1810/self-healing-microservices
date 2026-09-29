@@ -1,0 +1,348 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Self-Healing Microservices Platform</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        body {
+            min-height: 100vh;
+            background: #f4f7fb;
+            color: #1f2937;
+        }
+
+        .header {
+            background: #111827;
+            color: white;
+            padding: 20px 50px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 22px;
+            font-weight: bold;
+        }
+
+        .status {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            background: #1f2937;
+            padding: 10px 16px;
+            border-radius: 20px;
+            font-size: 14px;
+        }
+
+        .status-dot {
+            width: 10px;
+            height: 10px;
+            background: #22c55e;
+            border-radius: 50%;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: auto;
+            padding: 50px 25px;
+        }
+
+        .hero {
+            text-align: center;
+            margin-bottom: 45px;
+        }
+
+        .hero h1 {
+            font-size: 42px;
+            margin-bottom: 12px;
+            color: #111827;
+        }
+
+        .hero p {
+            font-size: 18px;
+            color: #6b7280;
+        }
+
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            margin-bottom: 35px;
+        }
+
+        .card {
+            background: white;
+            padding: 28px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.06);
+            border: 1px solid #e5e7eb;
+        }
+
+        .card h3 {
+            font-size: 14px;
+            color: #6b7280;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+        }
+
+        .card .value {
+            font-size: 25px;
+            font-weight: bold;
+            margin-bottom: 8px;
+        }
+
+        .green {
+            color: #16a34a;
+        }
+
+        .blue {
+            color: #2563eb;
+        }
+
+        .section {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            margin-bottom: 25px;
+            border: 1px solid #e5e7eb;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+        }
+
+        .section h2 {
+            margin-bottom: 22px;
+            font-size: 22px;
+        }
+
+        .service {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 17px 0;
+            border-bottom: 1px solid #eee;
+        }
+
+        .service:last-child {
+            border-bottom: none;
+        }
+
+        .service-name {
+            font-weight: bold;
+        }
+
+        .service-status {
+            background: #dcfce7;
+            color: #15803d;
+            padding: 7px 14px;
+            border-radius: 20px;
+            font-size: 13px;
+            font-weight: bold;
+        }
+
+        .tech-stack {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+
+        .tech {
+            padding: 10px 16px;
+            background: #eef2ff;
+            color: #3730a3;
+            border-radius: 8px;
+            font-weight: bold;
+            font-size: 14px;
+        }
+
+        .footer {
+            text-align: center;
+            color: #6b7280;
+            padding: 20px;
+            font-size: 14px;
+        }
+
+        @media (max-width: 800px) {
+            .cards {
+                grid-template-columns: 1fr;
+            }
+
+            .header {
+                padding: 20px;
+            }
+
+            .hero h1 {
+                font-size: 32px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header class="header">
+
+    <div class="logo">
+        🛡 Self-Healing Platform
+    </div>
+
+    <div class="status">
+        <span class="status-dot"></span>
+        SYSTEM ONLINE
+    </div>
+
+</header>
+
+
+<main class="container">
+
+    <section class="hero">
+
+        <h1>Self-Healing Microservices</h1>
+
+        <p>
+            Automated • Reliable • Kubernetes Ready
+        </p>
+
+    </section>
+
+
+    <section class="cards">
+
+        <div class="card">
+
+            <h3>Application</h3>
+
+            <div class="value green">
+                ● RUNNING
+            </div>
+
+            <p>
+                Health Service
+            </p>
+
+        </div>
+
+
+        <div class="card">
+
+            <h3>Health Status</h3>
+
+            <div class="value green">
+                ● HEALTHY
+            </div>
+
+            <p>
+                All checks passed
+            </p>
+
+        </div>
+
+
+        <div class="card">
+
+            <h3>Platform</h3>
+
+            <div class="value blue">
+                KUBERNETES
+            </div>
+
+            <p>
+                Deployment Ready
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <section class="section">
+
+        <h2>Services</h2>
+
+        <div class="service">
+
+            <span class="service-name">
+                Health Service
+            </span>
+
+            <span class="service-status">
+                ● RUNNING
+            </span>
+
+        </div>
+
+
+        <div class="service">
+
+            <span class="service-name">
+                REST API
+            </span>
+
+            <span class="service-status">
+                ● READY
+            </span>
+
+        </div>
+
+    </section>
+
+
+    <section class="section">
+
+        <h2>Technology Stack</h2>
+
+        <div class="tech-stack">
+
+            <span class="tech">Java</span>
+
+            <span class="tech">Spring Boot</span>
+
+            <span class="tech">Maven</span>
+
+            <span class="tech">Docker</span>
+
+            <span class="tech">Kubernetes</span>
+
+            <span class="tech">Jenkins</span>
+
+            <span class="tech">Git</span>
+
+        </div>
+
+    </section>
+
+
+    <section class="section">
+
+        <h2>Self-Healing Infrastructure</h2>
+
+        <p>
+            This platform is designed to automatically detect unhealthy
+            application instances and recover them using Kubernetes
+            health probes and replica management.
+        </p>
+
+    </section>
+
+</main>
+
+
+<footer class="footer">
+
+    Self-Healing Microservices Platform • Version 1.0.0
+
+</footer>
+
+</body>
+</html>
+```
