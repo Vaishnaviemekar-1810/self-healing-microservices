@@ -8,7 +8,7 @@ public class HealthController {
 
     @GetMapping("/")
     public String home() {
-        return "Self-Healing Microservices Platform is running!";
+        return "Self-Healing Microservices Platform - Version 2";
     }
 
     @GetMapping("/health")
